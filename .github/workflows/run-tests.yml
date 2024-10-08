@@ -23,6 +23,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        uses: yury-dubinin/e2e-test/.github/workflows/prod-frontend-e2e-tests.yml@main
+  run:
+    uses: yury-dubinin/e2e-test/.github/workflows/prod-frontend-e2e-tests.yml@main
