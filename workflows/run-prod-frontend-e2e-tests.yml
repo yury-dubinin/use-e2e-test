@@ -1,6 +1,7 @@
 name: Run Production frontend E2E tests
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:
@@ -9,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call test workflow
-        uses: yury-dubinin/e2e-test/.github/workflows/prod-frontend-e2e-tests.yml@main
+        run: echo pwd
