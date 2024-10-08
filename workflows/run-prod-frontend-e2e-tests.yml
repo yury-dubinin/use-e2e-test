@@ -1,0 +1,14 @@
+name: Run Production frontend E2E tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  preview-call-tests:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call test workflow
+        uses: yury-dubinin/e2e-test/.github/workflows/prod-frontend-e2e-tests.yml@main
+        with:
+          path: "**/node_modules"
